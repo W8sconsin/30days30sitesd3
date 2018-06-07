@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>National Memorial for Peace and Justice</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button">National Memorial for Peace and Justice</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#features" class="w3-bar-item w3-button">Features</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://cdn.vox-cdn.com/thumbor/5ON3kl5gZN6mgoHbvRfMND5HM_A=/0x0:5616x3744/1200x800/filters:focal(2359x1423:3257x2321)/cdn.vox-cdn.com/uploads/chorus_image/image/59504265/Memorial___Corridor_3__1_.0.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://bloximages.newyork1.vip.townnews.com/decaturdaily.com/content/tncms/assets/v3/editorial/8/0b/80be9601-69c8-5607-8760-d9b8c6a7cbd1/5ae21df4c1017.image.jpg?resize=1200%2C800" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="http://www.kolumnmagazine.com/wp-content/uploads/2018/04/Lynching-Memorial__02a.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="features">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Features</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class=" w3-black w3-padding">Legacy Museum</div>
+        <img src="http://visitingmontgomery.com/images/uploads/images/from-enslavement-to-mass-incarceration_0.jpg" alt="Museum" style="width:100%; height:220px">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class=" w3-black w3-padding">Memorial</div>
+        <img src="https://gdb.voanews.com/F68D2046-12EB-4C55-8004-BDCDF06C2813_cx0_cy3_cw0_w1023_r1_s.jpg" alt="Memorial" style="width:100%; height:220px">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class=" w3-black w3-padding">Educational Programs</div>
+        <img src="http://museumandmemorial.eji.org/sites/default/files/2018-04/museum-slavery-evolved-wall-home.png" alt="Educational Programming" style="width:100%; height:220px">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class=" w3-black w3-padding">Venue</div>
+        <img src="http://museumandmemorial.eji.org/sites/default/files/2017-10/memorial-overhead-home.png" alt="Venue" style="width:100%; height:220px">
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>
+      The National Memorial for Peace and Justice, informally known as the National Lynching Memorial, is a national memorial to commemorate the victims of lynching in the United States in order to acknowledge the past of racial terrorism in the search for social justice. Founded by the Equal Justice Initiative, it opened in downtown Montgomery, Alabama on April 26, 2018. The memorial was built on six acres in the downtown area of the state capital by the Equal Justice Initiative (EJI), a non-profit based in Montgomery. Also under the auspices of EJI is The Legacy Museum: From Enslavement to Mass Incarceration. It is built near the Montgomery site where enslaved African Americans were auctioned at market. The development and construction of the memorial complex cost an estimated $20 million raised from private foundations.
+    </p>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Version 1.0</p>
+  <p>Originally created for the #30days30sites and #100daysofcode challenges.</p>
+</footer>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
